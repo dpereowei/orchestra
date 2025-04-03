@@ -9,5 +9,5 @@ spec:
     app: orchestra
   ports:
     - protocol: TCP
-      port: {{ .Values.backend.service.port }}
-      targetPort: 8000
+      port: 80
+      targetPort: {{ .Values.backend.service.port }}

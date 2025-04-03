@@ -6,7 +6,7 @@ backend:
     tag: latest
     pullPolicy: Always
   service:
-    type: ClusterIP
+    type: NodePort
     port: 8000
   resources:
     limits:
