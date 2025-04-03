@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: orchestra
+  namespace: orchestra
+spec:
+  type: {{ .Values.backend.service.type }}
+  selector:
+    app: orchestra
+  ports:
+    - protocol: TCP
+      port: {{ .Values.backend.service.port }}
+      targetPort: 8000

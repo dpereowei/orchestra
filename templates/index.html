@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchestra Logs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h2>Orchestra - Kubernetes Logs</h2>
+
+    <label for="namespaceDropdown">Namespace:</label>
+    <select id="namespaceDropdown"></select>
+
+    <label for="podDropdown">Pod:</label>
+    <select id="podDropdown"></select>
+
+    <label for="containerDropdown">Container:</label>
+    <select id="containerDropdown"></select>
+
+    <button onclick="startLogStreaming()" id="fetchLogs">Fetch Logs</button>
+
+    <div id="logsContainer" style="margin-top: 20px; white-space: pre-line;"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
