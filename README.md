@@ -1,1 +1,1 @@
-helm upgrade --install orchestra ./orchestra --create-namespace --namespace orchestra
+helm upgrade --install orchestra ./helm --create-namespace --namespace orchestra
